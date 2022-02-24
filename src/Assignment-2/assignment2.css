@@ -5,3 +5,121 @@
 width: 100%;
 height: 100%;
 }
+
+
+/* Header is here */
+
+.header{
+    width: 100%;
+    height: 100px;
+    border: 1px solid blueviolet;
+    background-color: blue;
+}
+
+.logo{
+    height: 75px;
+    width: 75px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.Fix{
+    display: inline-block;
+    vertical-align: top;
+}
+.app-search-form{
+    float: right;
+    margin-top: 35px;
+    margin-right: 50px;
+}
+
+
+/* Nav Bar is here */
+
+.nav-bar{
+    height: 30px;
+    width: 98.7%;
+    background-color: #ffbb99;
+    border: 1px solid #ffbb99;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+.nav-link{
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-right: 140px;
+    /* border: 1px solid; */
+}
+
+.nav-link:hover {
+    color: blueviolet;
+}
+
+/* Nav Bar Ends here */
+
+/* Left aside is here */
+.left-aside{
+    height: 450px;
+    width: 300px;
+    background-color: #40ff00;
+    border: 1px solid #40ff00;
+}
+.left-list{
+    padding-left: 120px;
+}
+
+/* Left aside ends here */
+
+/* Main content section is here */
+
+#main-content-section{
+    height: 450px;
+    width: 780px;
+    background-color: #006600;
+    border: 1px solid #006600;
+    margin-left: 40px;
+}
+.post-image{
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid white;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.inline{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+}
+/* Main content section ends here */
+
+/* Right aside is here */
+#right-sidebar-menu{
+    height: 450px;
+    width: 325px;
+    background-color: #40ff00;
+    border: 1px solid #40ff00;
+    margin-left: 40px;
+}
+
+.right-list{
+    padding-left: 120px;
+}
+/* Right aside ends here  */
+
+/* Footer is here */
+#page-footer{
+    background-color: #b3ffff;
+    border: 1px solid #b3ffff;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.footer-para{
+    font-size: 20px;
+}
+/* Footer ends here */
