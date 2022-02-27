@@ -5,3 +5,82 @@
 width: 100%;
 height: 100%;
 }
+
+/* Top section is here */
+.section{
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+}
+
+.inline{
+    display: inline-block;
+    /* border: 1px solid; */
+    height: 400px;
+    width: 750px;
+    vertical-align: top;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.header{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.para{
+    width: 30%;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    margin-left: 33%;
+}
+
+#render-wiki{
+    height: 400px;
+    width: 750px;
+    /* border: 1px solid; */
+}
+
+
+/* Top section ends here */
+
+/* Bottom section is here */
+.block{
+    margin-left: 25%;
+    width: 750px;
+    height: 250px;
+    /* border: 1px solid; */
+    text-align: center;
+}
+
+.header1{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* border: 1px solid; */
+    margin-left: 10px;
+}
+
+.para1{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.button1{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+/* Bottom section ends here */
