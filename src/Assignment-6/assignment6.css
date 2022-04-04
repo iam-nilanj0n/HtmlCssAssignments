@@ -1,0 +1,100 @@
+/* Our CSS file. */
+
+.container, .content {
+    width: 100%;
+    height: 100%;
+
+}
+  
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    background: linear-gradient(to right, #ff0066 0%, #0099ff 100%);
+}
+main{
+    width: 90%;
+    max-width: 70rem;
+    min-height: 15rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    background: linear-gradient(to right, #6699ff 0%, #66ccff 100%);
+    border-radius: 1rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 2fr;
+}
+
+.form{
+    padding: 1rem;
+}
+.form, .form > *, .container> *{
+    border-radius: 1rem;
+}
+.info p .label {
+    font-weight: bolder;
+}
+.info > span{
+    color: black;
+}
+.textarea {
+    width: 100%;
+    min-height: 20rem;
+    padding: 1.5rem;
+    color: seagreen;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    border: 1px solid aquamarine;
+}
+.button{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.5rem 1 rem;
+    border: 0;
+    font-weight: bold;
+    font-size: 1.8rem ;
+    background: linear-gradient(to right, #cc0000 0%, #ff0000 100%);
+    color: #fff;
+    overflow: hidden;
+    transition: 0.5s linear;
+
+}
+.button:hover{
+    background: #ff0066;
+}
+.thread-box {
+    min-height: 5rem;
+    display: grid;
+    grid: 1.5rem;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr)); 
+    margin-left: 1.5rem;
+}
+.thread {
+    min-height: 5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.75rem;
+    background: #b3ffcc;
+}
+.tools {
+    display: flex;
+    margin-bottom: 0.75rem;
+    justify-content: end;
+    align-items: centers ;
+}
+.tools .index{
+    margin-right: auto;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    background: teal;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.close{
+    border: 1px solid #f6f6f6;
+    cursor: pointer;
+    margin: 0 0.2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.7rem;
+    display: inline-block;
+}

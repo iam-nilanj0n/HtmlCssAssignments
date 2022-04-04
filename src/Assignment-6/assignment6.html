@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<script src="bundle.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id="container">
+
+	<!-- Start your code from here -->
+	<main>
+		<form class="form">
+			<div class="info">
+				<p><label class="label">Characters:</label><span class="count">00</span></p>
+				<p><label class="label">Threads:</label><span class="threadCount">00</span></p>
+			</div>
+			<div class="container">
+				<textarea class="textarea" placeholder="The character limit for each thread is 275." required wrap="soft" onkeyup="textInfo(this);"></textarea>
+				<button type="submit" class="button">Thread</button>
+			</div> 
+		</form>
+		<div class="thread-box">
+			<div class="thread">
+				 <span class="sl">✨</span><br/>
+				 Your threads will be here.🔥💧❄⚡<br/><br/>
+				 ℹ️ The character limit for each thread is 275.<br/><br/> 
+				 <!--Dynamic Threads will appear here-->
+			</div>
+		</div>
+	</main>
+	<!-- End your code -->
+
+	</div>
+
+	<script type="text/javascript">
+	// write your javascript code here
+	const dom=(s)=>document.querySelector(s);
+	const form=dom('.form');
+	const charCount=dom('.count');
+	const threadCount=dom('.threadCount');
+	const threadbox = dom('.thread-box'); 
+	const size=275;
+	let threadArr = [];
+	function textInfo(event){
+		let length=event.value.length;
+		console.log(length);
+		charCount.innerHTML=length;
+		threadCount.innerHTML=Math.ceil(length/size);
+		length > size ?(event.style.color='dodgerblue'): (event.style.color='seagreen');
+	}
+	function displayThread(listParent,arr){
+		listParent.innerHTML = arr.map((el,i)=>{
+			return `
+			<article class='thread' data-index="${i}">
+		    <div class="tools">
+			<span class="index">${i<9?'0'+(i+1): i+1}</span>
+			<span class='close' data-index="${i}">X</span>	
+			</div>
+			<p class="thread-str">
+				${el}
+			</p>
+			</article>
+			 `;
+		}).join("")
+	}
+	function cleanThread(str){
+		let splitOnwhitespace=str.split(' ');
+		//console.log(splitOnwhitespace);
+		let result = [];
+		let totallength = 0;
+		let sentence='';
+		for(let i =0;i<splitOnwhitespace.length;i++){
+			let curWord=splitOnwhitespace[i];
+			let curWordLength=curWord.length;
+
+
+
+			//build the sentence
+			
+			sentence = sentence + curWord + ' ';
+			totallength = sentence.length;
+			//console.log(sentence);
+			//console.log(totallength);
+			if(totallength >= size){
+				result.push(sentence);
+				sentence='';
+				totallength = 0;
+			}
+			//if(totallength>=size){
+			// 	sentence = sentence.trim();
+			// 	let lengthDiff = sentence.length - size;//check if a word needs to be dropped
+			// 	if(lengthDiff>0){
+			// 		let lastIndexofWhiteSpace=sentence.lastIndexOf(' ');
+			// 		sentence = sentence.slice(0,lastIndexofWhiteSpace);
+			// 	}
+			// 	result.push(sentence);
+			// 	totallength = 0;
+			// 	sentence='';
+			// }
+			// if(i==splitOnwhitespace.length - 1 && totallength<=size && sentence !==''){
+			// 	result.push(sentence.trim());
+			// }
+		}
+		result.push(sentence);
+		console.log(sentence);
+		console.log(result);
+		return result;
+	}
+
+	function thread(e){
+		//console.log("Ok 105")
+		e.preventDefault();
+		const thread = dom('.thread');
+		console.log(dom('.textarea').value);
+		threadArr=cleanThread(dom('.textarea').value);
+		//console.log(threadArr);
+		//console.log(threadbox);
+		displayThread(threadbox,threadArr);
+	}
+	//Events
+	form.addEventListener("submit",thread);
+
+	function deleteThread(e){
+		e.preventDefault();
+		const [el,index]=[e.target, e.target.dataset.index];
+		let text = e.target.dataset.para;
+		if(el.classList.contains('close')){
+			threadArr.splice(index,1);
+			displayThread(threadbox,threadArr);
+		}
+
+	}
+	threadbox.addEventListener("click",deleteThread);
+
+	</script>
+
+</body>
+<script>
+/* DO NOT EDIT THIS CODE- WRITTERN TO PREVENT CSS CACHING */	  
+	// Get HTML head element
+	var head = document.getElementsByTagName('HEAD')[0]; 
+	// Create new link Element
+	var link = document.createElement('link');
+	// set the attributes for link element 
+	link.rel = 'stylesheet'; 
+	link.type = 'text/css';
+	link.href = './assignment6.css?v='+ new Date().getTime(); 
+	// Append link element to HTML head
+	head.appendChild(link); 
+	/* DO NOT EDIT THIS CODE- WRITTERN TO PREVENT CSS CACHING */	  
+</script> 
+</html>
